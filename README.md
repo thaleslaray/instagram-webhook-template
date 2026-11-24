@@ -1,5 +1,9 @@
 # Webhook do Instagram
 
+> **Este repositório mudou de casa.** O webhook agora fica na pasta [`webhook/`](https://github.com/thaleslaray/instagram-claude/tree/main/webhook) do [Instagram + Claude](https://github.com/thaleslaray/instagram-claude), com o mesmo botão. Use o botão de lá:
+>
+> [![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/thaleslaray/instagram-claude/tree/main/webhook)
+
 O webhook mais simples possível para ligar as DMs do seu app da Meta. Um clique, uma senha, pronto.
 
 [![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/thaleslaray/instagram-webhook-template)
