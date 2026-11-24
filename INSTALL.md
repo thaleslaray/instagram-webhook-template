@@ -17,7 +17,7 @@ Pergunte se ela tem:
 
 - conta na Cloudflare (a grátis serve, sem cartão);
 - conta no GitHub;
-- um app na Meta com o Instagram configurado.
+- um app na Meta com o Instagram configurado e em modo **Live**.
 
 Se ela não tem o app na Meta, pare. Indique o repositório https://github.com/thaleslaray/instagram-claude e a skill `/instagram-app-meta`, que criam o app. Depois ela volta aqui.
 
@@ -44,7 +44,7 @@ curl -s -o /dev/null -w '%{http_code}\n' "<endereço>"
 ```
 
 - `403`: certo. É a resposta para quem não tem a senha.
-- `404` com "Hello World" no corpo: subiu o código padrão. Peça para ela apagar o Worker e clicar no botão de novo.
+- `200` (ou o navegador mostra "Hello World"): subiu o código padrão, não o do template. Peça para ela apagar o Worker e clicar no botão de novo.
 - `523` ou `1010`: espere 1 minuto e rode de novo.
 
 Peça também para ela abrir o endereço no navegador. Deve aparecer `forbidden`.
@@ -53,7 +53,7 @@ Peça também para ela abrir o endereço no navegador. Deve aparecer `forbidden`
 
 Guie os passos 6 a 8 do README, um de cada vez, esperando a pessoa confirmar cada um:
 
-- Painel da Meta: app > Casos de uso > Instagram > Personalizar > API setup with Instagram login > passo 3, "Configurar webhooks". Colar o endereço em "URL de callback" e a senha em "Verificar token". Clicar em "Verificar e salvar".
+- Painel da Meta: app > Casos de uso > Instagram > Personalizar > "API setup with Instagram login" (ou "API setup with Unified login") > passo 3, "Configurar webhooks". Colar o endereço em "URL de callback" e a senha em "Verificar token". Clicar em "Verificar e salvar".
 - Assinar o campo `messages`.
 - No passo 2 da mesma página, ligar a chave "Assinatura do webhook" da conta do Instagram.
 
